@@ -150,7 +150,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 main{
     background-color:#000000 ;
     min-height:100vh;
