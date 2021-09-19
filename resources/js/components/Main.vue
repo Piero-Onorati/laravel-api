@@ -37,7 +37,7 @@
                     <h5 class="card-title h-25">{{post.title}}</h5>
                     <p class="card-text">{{truncate(post.content, 150)}}</p>
                     <div class="post_date">
-                        <span class="date_post">{{formatDate(post.created_at)}}</span>
+                        <span class="date_post">Posted on: {{formatDate(post.created_at)}}</span>
                     </div>
                 </div>
                 <!-- Card footer -->
@@ -123,9 +123,9 @@ export default {
         },
 
         // change date format
-        formatDate(){
+        formatDate(date){
             //create an instance of the date object
-            const postDate = new Date();
+            const postDate = new Date(date);
 
             let day = postDate.getDate();
 

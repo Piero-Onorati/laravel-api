@@ -2352,9 +2352,9 @@ __webpack_require__.r(__webpack_exports__);
       return text;
     },
     // change date format
-    formatDate: function formatDate() {
+    formatDate: function formatDate(date) {
       //create an instance of the date object
-      var postDate = new Date();
+      var postDate = new Date(date);
       var day = postDate.getDate();
 
       if (day < 10) {
@@ -38883,7 +38883,9 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", { staticClass: "post_date" }, [
                   _c("span", { staticClass: "date_post" }, [
-                    _vm._v(_vm._s(_vm.formatDate(post.created_at)))
+                    _vm._v(
+                      "Posted on: " + _vm._s(_vm.formatDate(post.created_at))
+                    )
                   ])
                 ])
               ]),
