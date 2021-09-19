@@ -70,8 +70,8 @@
 
             {{-- BUTTON --}}
             <div class="mb-3">
-                <button type="submit" class="btn btn-primary">Add Post</button>
-                <a href="{{route('admin.posts.index')}}" class="btn btn-dark mx-3">Back to Posts List</a>
+                <button type="submit" class="btn blue_button">Add Post</button>
+                <a href="{{route('admin.posts.index')}}" class="btn dark_button mx-3">Back to Posts List</a>
             </div>
 
         </form>

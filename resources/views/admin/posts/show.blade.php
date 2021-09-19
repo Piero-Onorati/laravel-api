@@ -26,7 +26,7 @@
         </li>
         <li class="list-group-item">
           @forelse ($post->tags as $tag)
-            <h5 class="d-inline-block"><span class="badge bg-info text-dark">{{$tag->name}}</span></h5>
+            <h5 class="d-inline-block"><span class="badge post_tag">{{$tag->name}}</span></h5>
           @empty
           there are not tags      
           @endforelse
@@ -43,9 +43,9 @@
   <!-- end CARD -->
 
   <!-- BUTTONS -->
-  <a href="{{route('admin.posts.edit', $post->id)}}" class="btn btn-primary">Edit Post</a>
+  <a href="{{route('admin.posts.edit', $post->id)}}" class="btn blue_button">Edit Post</a>
 
-  <a href="{{route('admin.posts.index')}}" class="btn btn-dark mx-3">Back to Posts List</a>
+  <a href="{{route('admin.posts.index')}}" class="btn dark_button mx-3">Back to Posts List</a>
 
 </div>
     

@@ -13,17 +13,18 @@
         @foreach ($categories as $category)
             <div class="col mb-5">
                 <!-- start CARD -->
-                <div class="card border-secondary ">
+                <div class="card">
 
                     {{-- card header --}}
-                    <button class="card-header bg-dark text-light border-0" type="button" data-bs-toggle="collapse" 
-                    data-bs-target="#tag{{$loop->iteration}}" aria-expanded="false" aria-controls="collapseExample">
+                    <button class="card-header border-0 btn dark_blue_btn" type="button" 
+                        data-bs-toggle="collapse" data-bs-target="#tag{{$loop->iteration}}" aria-expanded="false" aria-controls="collapseExample">
                         <h6 class="text-uppercase fw-bold">
                             <i class="bi bi-arrow-down-square"></i>
                             {{$category->name}}
-                            <span class="badge bg-danger">{{count($category->posts)}}+</span>
+                            <span class="badge notification_span">{{count($category->posts)}}+</span>
                         </h6>
-                    </div>
+                    
+                    </button>
 
                     {{-- card body --}}
                     <div class="collapse" id="tag{{$loop->iteration}}">
@@ -46,7 +47,7 @@
                                 @endforelse 
                             </tbody>
                         </table>
-                    </button>
+                    </div>
                     
                 </div>
                 <!-- end CARD -->
